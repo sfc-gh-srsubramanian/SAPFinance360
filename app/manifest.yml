@@ -1,0 +1,31 @@
+manifest_version: 2
+
+version:
+  name: v1
+  label: "Finance 360 v1 (self-contained)"
+  comment: "SAP Finance 360 dashboard (React + Express on SPCS) with bundled data and the SAP_FINANCE_360 Cortex Analyst semantic view."
+
+configuration:
+  log_level: INFO
+  trace_level: ALWAYS
+
+artifacts:
+  readme: README.md
+  setup_script: setup.sql
+  default_web_endpoint:
+    service: services.finance_360_service
+    endpoint: finance360
+  container_services:
+    images:
+      - /sc360_app_provider/images/repo/finance_360:latest
+
+privileges:
+  - CREATE COMPUTE POOL:
+      description: "Create the compute pool that runs the dashboard container."
+  - BIND SERVICE ENDPOINT:
+      description: "Expose the dashboard web UI endpoint."
+  - CREATE WAREHOUSE:
+      description: "Create a warehouse used to query the bundled Finance data."
+
+lifecycle_callbacks:
+  version_initializer: core.version_init
