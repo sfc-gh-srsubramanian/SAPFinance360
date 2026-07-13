@@ -54,20 +54,6 @@ Products**, plus an **Ask the Agent** page (Cortex Analyst over the bundled
 `SAP_FINANCE_360` semantic view). Company codes: **1000 = US, 2100 = DE,
 5000 = JP**.
 
-## Live reference deployment
-
-Deployed as a region-scoped organization listing
-(`ORGDATACLOUD$INTERNAL$FINANCE_360_ORG`) in three regions:
-
-| Region | App URL |
-|--------|---------|
-| North America | https://erzht4-sfsenorthamerica-dfreriks-aws1-w2.snowflakecomputing.app |
-| EMEA | https://ia3ite-sfseeurope-dfreriks-eu-demo.snowflakecomputing.app |
-| APAC | https://iahbbd-sfseapac-sap-data-product-demo.snowflakecomputing.app |
-
-> URLs are for the internal reference deployment; consumers get their own URL
-> on install.
-
 ## Demo
 
 See [`docs/DEMO_GUIDE.md`](docs/DEMO_GUIDE.md) and the slide deck
