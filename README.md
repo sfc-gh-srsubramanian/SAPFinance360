@@ -67,3 +67,8 @@ See [`docs/DEMO_GUIDE.md`](docs/DEMO_GUIDE.md) and the slide deck
   `*.p8`, `.env`, and `connections.toml`.
 - L0 SAP BDC products are read-only zero-copy shares; the medallion only reads
   from them.
+
+## Sibling projects
+
+Same pattern, other SAP domains:
+`sap-bdc-supply-chain-360` · `sap-bdc-people-360` · `sap-bdc-sales-360`
