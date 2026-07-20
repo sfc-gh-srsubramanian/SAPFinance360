@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#29B5E8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1e88c7;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F39C12;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#E67E22;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#30D158;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#28a745;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#f1f5f9">SAP BDC Finance 360 — Medallion Architecture</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#94a3b8">Zero ETL · Governed Semantic Layer · AI-Powered Analytics</text>
+
+  <!-- L0 BRONZE -->
+  <g transform="translate(30, 100)" filter="url(#shadow)">
+    <rect width="200" height="520" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <rect width="200" height="36" rx="12" fill="#92400e" opacity="0.8"/>
+    <rect y="24" width="200" height="12" fill="#92400e" opacity="0.8"/>
+    <text x="100" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#fbbf24">L0 — BRONZE</text>
+    <text x="100" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">SAP BDC Standard Products</text>
+
+    <!-- Source tables -->
+    <g transform="translate(15, 75)">
+      <rect width="170" height="58" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="20" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">OPERATIONALACCTGDOCITEM</text>
+      <text x="85" y="36" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Universal Journal (ACDOCA)</text>
+      <text x="85" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">25,000 line items</text>
+    </g>
+    <g transform="translate(15, 145)">
+      <rect width="170" height="50" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">JOURNALENTRY</text>
+      <text x="85" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Document Headers</text>
+      <text x="85" y="46" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">5,000 documents</text>
+    </g>
+    <g transform="translate(15, 207)">
+      <rect width="170" height="50" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">SUPPLIERINVOICE</text>
+      <text x="85" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Accounts Payable</text>
+      <text x="85" y="46" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">3,000 invoices</text>
+    </g>
+    <g transform="translate(15, 269)">
+      <rect width="170" height="50" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">GENERALLEDGERACCOUNT</text>
+      <text x="85" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">GL Account Master</text>
+      <text x="85" y="46" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">43 accounts</text>
+    </g>
+    <g transform="translate(15, 331)">
+      <rect width="170" height="50" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">COSTCENTER</text>
+      <text x="85" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Cost Center Master</text>
+      <text x="85" y="46" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">30 centers</text>
+    </g>
+    <g transform="translate(15, 393)">
+      <rect width="170" height="50" rx="6" fill="#292524" stroke="#78350f" stroke-width="1"/>
+      <text x="85" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#fbbf24">PROFITCENTER</text>
+      <text x="85" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Profit Center Master</text>
+      <text x="85" y="46" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#78716c">16 centers</text>
+    </g>
+
+    <text x="100" y="475" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Zero Copy · Read Only</text>
+    <text x="100" y="490" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">No ETL · No Extraction</text>
+  </g>
+
+  <!-- Arrow L0 → L1 -->
+  <g transform="translate(235, 340)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,3"/>
+    <polygon points="40,-5 50,0 40,5" fill="#fbbf24"/>
+  </g>
+
+  <!-- L1 SILVER -->
+  <g transform="translate(285, 100)" filter="url(#shadow)">
+    <rect width="180" height="520" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <rect width="180" height="36" rx="12" fill="#475569" opacity="0.8"/>
+    <rect y="24" width="180" height="12" fill="#475569" opacity="0.8"/>
+    <text x="90" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#e2e8f0">L1 — SILVER</text>
+    <text x="90" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">Curated Views</text>
+
+    <g transform="translate(10, 75)">
+      <rect width="160" height="34" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="80" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#e2e8f0">Business-friendly names</text>
+    </g>
+    <g transform="translate(10, 120)">
+      <rect width="160" height="34" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="80" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#e2e8f0">Column-level comments</text>
+    </g>
+    <g transform="translate(10, 165)">
+      <rect width="160" height="34" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="80" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#e2e8f0">Standardized interfaces</text>
+    </g>
+    <g transform="translate(10, 210)">
+      <rect width="160" height="34" rx="6" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+      <text x="80" y="22" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#e2e8f0">SAP context preserved</text>
+    </g>
+
+    <text x="90" y="475" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Schema: SAP_BDC_L1</text>
+    <text x="90" y="490" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">6 Views</text>
+  </g>
+
+  <!-- Arrow L1 → L2 -->
+  <g transform="translate(470, 340)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,3"/>
+    <polygon points="40,-5 50,0 40,5" fill="#94a3b8"/>
+  </g>
+
+  <!-- L2 GOLD -->
+  <g transform="translate(520, 100)" filter="url(#shadow)">
+    <rect width="200" height="520" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <rect width="200" height="36" rx="12" fill="url(#goldGrad)" opacity="0.9"/>
+    <rect y="24" width="200" height="12" fill="url(#goldGrad)" opacity="0.9"/>
+    <text x="100" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#1e293b">L2 — GOLD</text>
+    <text x="100" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">Analytics Dynamic Tables</text>
+
+    <g transform="translate(10, 75)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_JOURNAL_ENTRY_360</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Full 360° joined view</text>
+    </g>
+    <g transform="translate(10, 127)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_PNL_SUMMARY</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Revenue / Expenses / NI</text>
+    </g>
+    <g transform="translate(10, 179)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_EXPENSE_BY_COSTCENTER</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Cost center allocation</text>
+    </g>
+    <g transform="translate(10, 231)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_REVENUE_BY_PROFITCTR</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Segment revenue analysis</text>
+    </g>
+    <g transform="translate(10, 283)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_AP_AGING</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Vendor aging buckets</text>
+    </g>
+    <g transform="translate(10, 335)">
+      <rect width="180" height="42" rx="6" fill="#292524" stroke="#F39C12" stroke-width="1"/>
+      <text x="90" y="18" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="600" fill="#F39C12">DT_AR_AGING</text>
+      <text x="90" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">Customer DSO &amp; aging</text>
+    </g>
+
+    <text x="100" y="475" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Auto-refresh: DOWNSTREAM</text>
+    <text x="100" y="490" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Warehouse: LOAD_WH</text>
+  </g>
+
+  <!-- Arrow L2 → Semantic -->
+  <g transform="translate(725, 340)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#F39C12" stroke-width="2" stroke-dasharray="4,3"/>
+    <polygon points="40,-5 50,0 40,5" fill="#F39C12"/>
+  </g>
+
+  <!-- SEMANTIC + AI Layer -->
+  <g transform="translate(775, 100)" filter="url(#shadow)">
+    <rect width="190" height="520" rx="12" fill="#1e293b" stroke="#29B5E8" stroke-width="1.5"/>
+    <rect width="190" height="36" rx="12" fill="url(#blueGrad)"/>
+    <rect y="24" width="190" height="12" fill="url(#blueGrad)"/>
+    <text x="95" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">SEMANTIC + AI</text>
+    <text x="95" y="56" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#94a3b8">Governed Intelligence</text>
+
+    <!-- Semantic View -->
+    <g transform="translate(10, 80)">
+      <rect width="170" height="110" rx="8" fill="#0c2d48" stroke="#29B5E8" stroke-width="1"/>
+      <text x="85" y="20" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#29B5E8">SAP_FINANCE_360</text>
+      <text x="85" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Semantic View</text>
+      <text x="15" y="58" font-family="Inter, Arial, sans-serif" font-size="9" fill="#7dd3fc">▸ 5 Facts</text>
+      <text x="15" y="72" font-family="Inter, Arial, sans-serif" font-size="9" fill="#7dd3fc">▸ 24 Dimensions</text>
+      <text x="15" y="86" font-family="Inter, Arial, sans-serif" font-size="9" fill="#7dd3fc">▸ 9 Metrics</text>
+      <text x="15" y="100" font-family="Inter, Arial, sans-serif" font-size="9" fill="#7dd3fc">▸ 4 Tables</text>
+    </g>
+
+    <!-- Agent -->
+    <g transform="translate(10, 210)">
+      <rect width="170" height="90" rx="8" fill="#0c2d48" stroke="#30D158" stroke-width="1"/>
+      <text x="85" y="20" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">SAP_FINANCE_360_AGENT</text>
+      <text x="85" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Cortex Agent</text>
+      <text x="15" y="58" font-family="Inter, Arial, sans-serif" font-size="9" fill="#86efac">▸ Natural language queries</text>
+      <text x="15" y="72" font-family="Inter, Arial, sans-serif" font-size="9" fill="#86efac">▸ Text-to-SQL via Analyst</text>
+      <text x="15" y="84" font-family="Inter, Arial, sans-serif" font-size="9" fill="#86efac">▸ Snowflake Intelligence</text>
+    </g>
+
+    <!-- Native App -->
+    <g transform="translate(10, 320)">
+      <rect width="170" height="100" rx="8" fill="#0c2d48" stroke="#a78bfa" stroke-width="1"/>
+      <text x="85" y="20" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#a78bfa">FINANCE_360_APP</text>
+      <text x="85" y="38" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Native App (SPCS)</text>
+      <text x="15" y="58" font-family="Inter, Arial, sans-serif" font-size="9" fill="#c4b5fd">▸ React + Express</text>
+      <text x="15" y="72" font-family="Inter, Arial, sans-serif" font-size="9" fill="#c4b5fd">▸ 8 dashboard pages</text>
+      <text x="15" y="86" font-family="Inter, Arial, sans-serif" font-size="9" fill="#c4b5fd">▸ Ask the Agent (Analyst)</text>
+    </g>
+
+    <text x="95" y="475" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Multi-region deployable</text>
+    <text x="95" y="490" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#64748b">Self-contained package</text>
+  </g>
+
+  <!-- Arrow → Users -->
+  <g transform="translate(970, 340)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#30D158" stroke-width="2" stroke-dasharray="4,3"/>
+    <polygon points="40,-5 50,0 40,5" fill="#30D158"/>
+  </g>
+
+  <!-- Users -->
+  <g transform="translate(1020, 180)" filter="url(#shadow)">
+    <rect width="150" height="360" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <rect width="150" height="36" rx="12" fill="url(#greenGrad)"/>
+    <rect y="24" width="150" height="12" fill="url(#greenGrad)"/>
+    <text x="75" y="24" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" fill="#1e293b">CONSUMERS</text>
+
+    <text x="75" y="70" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">CFO / VP Finance</text>
+    <text x="75" y="88" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Executive dashboards</text>
+
+    <text x="75" y="120" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">Controllers</text>
+    <text x="75" y="138" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">GL &amp; period close</text>
+
+    <text x="75" y="170" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">AP / AR Teams</text>
+    <text x="75" y="188" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Aging &amp; collections</text>
+
+    <text x="75" y="220" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">Cost Analysts</text>
+    <text x="75" y="238" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Cost center variance</text>
+
+    <text x="75" y="270" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">FP&amp;A</text>
+    <text x="75" y="288" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Revenue &amp; profitability</text>
+
+    <text x="75" y="320" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#30D158">Any Business User</text>
+    <text x="75" y="338" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#94a3b8">Natural language Q&amp;A</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="660" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">SAP Business Data Cloud → Snowflake Medallion Architecture → Cortex AI → Self-Service Finance Analytics</text>
+  <text x="600" y="680" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#475569">Zero ETL · Zero Copy · Full SAP Business Context Preserved</text>
+</svg>

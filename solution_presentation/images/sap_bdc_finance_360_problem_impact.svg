@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#f1f5f9">The Cost of SAP Data Fragmentation</text>
+  <text x="600" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" fill="#94a3b8">What inaction costs the average enterprise finance organization annually</text>
+
+  <!-- Metric Card 1 -->
+  <g transform="translate(60, 100)" filter="url(#shadow)">
+    <rect width="340" height="180" rx="12" fill="#1e293b"/>
+    <rect width="340" height="4" rx="2" fill="#FF6B6B"/>
+    <text x="170" y="45" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#FF6B6B">PIPELINE MAINTENANCE</text>
+    <text x="170" y="95" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="#f1f5f9">$2M+</text>
+    <text x="170" y="125" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">Annual ETL infrastructure, engineering,</text>
+    <text x="170" y="143" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">monitoring, and incident response</text>
+    <text x="170" y="168" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Gartner Data Integration TCO Study, 2024</text>
+  </g>
+
+  <!-- Metric Card 2 -->
+  <g transform="translate(430, 100)" filter="url(#shadow)">
+    <rect width="340" height="180" rx="12" fill="#1e293b"/>
+    <rect width="340" height="4" rx="2" fill="#F39C12"/>
+    <text x="170" y="45" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#F39C12">DELAYED DECISIONS</text>
+    <text x="170" y="95" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="#f1f5f9">12 days</text>
+    <text x="170" y="125" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">Average month-end close duration;</text>
+    <text x="170" y="143" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">each day = $170K opportunity cost</text>
+    <text x="170" y="168" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">Deloitte CFO Survey, 2024</text>
+  </g>
+
+  <!-- Metric Card 3 -->
+  <g transform="translate(800, 100)" filter="url(#shadow)">
+    <rect width="340" height="180" rx="12" fill="#1e293b"/>
+    <rect width="340" height="4" rx="2" fill="#a78bfa"/>
+    <text x="170" y="45" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#a78bfa">WASTED TALENT</text>
+    <text x="170" y="95" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="700" fill="#f1f5f9">60%</text>
+    <text x="170" y="125" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">Of finance team time spent gathering</text>
+    <text x="170" y="143" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#94a3b8">and reconciling data (not analyzing)</text>
+    <text x="170" y="168" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#64748b">McKinsey Digital Finance Report, 2024</text>
+  </g>
+
+  <!-- Central problem visualization -->
+  <g transform="translate(200, 330)" filter="url(#shadow)">
+    <rect width="800" height="240" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    
+    <!-- SAP Modules (disconnected) -->
+    <text x="400" y="35" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#f1f5f9">SAP Finance Modules — Disconnected from Analytics</text>
+    
+    <!-- Module boxes -->
+    <g transform="translate(30, 55)">
+      <rect width="110" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="55" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">GL / ACDOCA</text>
+      <text x="55" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">25K+ line items</text>
+    </g>
+    <g transform="translate(160, 55)">
+      <rect width="110" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="55" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">AP Invoices</text>
+      <text x="55" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">3K invoices</text>
+    </g>
+    <g transform="translate(290, 55)">
+      <rect width="110" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="55" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">Cost Centers</text>
+      <text x="55" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">30 centers</text>
+    </g>
+    <g transform="translate(420, 55)">
+      <rect width="110" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="55" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">Profit Centers</text>
+      <text x="55" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">16 centers</text>
+    </g>
+    <g transform="translate(550, 55)">
+      <rect width="110" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="55" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">AR / Customers</text>
+      <text x="55" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">2K receivables</text>
+    </g>
+    <g transform="translate(680, 55)">
+      <rect width="90" height="70" rx="8" fill="#292524" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="45" y="30" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">GL Master</text>
+      <text x="45" y="50" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="9" fill="#a8a29e">43 accounts</text>
+    </g>
+
+    <!-- Broken connections -->
+    <line x1="140" y1="140" x2="200" y2="140" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+    <line x1="270" y1="140" x2="330" y2="140" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+    <line x1="400" y1="140" x2="460" y2="140" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+    <line x1="530" y1="140" x2="590" y2="140" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+    <line x1="660" y1="140" x2="720" y2="140" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="2,4" opacity="0.5"/>
+
+    <!-- Impact statement -->
+    <text x="400" y="175" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#FF6B6B">No unified view · No self-service · No AI access · No cross-module analytics</text>
+    
+    <!-- Bottom stats -->
+    <g transform="translate(50, 195)">
+      <text x="0" y="15" font-family="Inter, Arial, sans-serif" font-size="11" fill="#94a3b8">▸ 2-4 week wait for ad-hoc reports</text>
+      <text x="280" y="15" font-family="Inter, Arial, sans-serif" font-size="11" fill="#94a3b8">▸ 3-5% revenue leakage from missed anomalies</text>
+      <text x="570" y="15" font-family="Inter, Arial, sans-serif" font-size="11" fill="#94a3b8">▸ 6 month project per region</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="620" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#FF6B6B">Combined annual impact: $4.7M+ per enterprise</text>
+  <text x="600" y="650" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="11" fill="#64748b">Sources: Gartner, Deloitte, McKinsey, PwC — 2024 finance transformation research</text>
+</svg>

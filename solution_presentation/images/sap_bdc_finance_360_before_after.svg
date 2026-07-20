@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#0f172a"/>
+
+  <!-- Title -->
+  <text x="600" y="42" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#f1f5f9">The Transformation — Before &amp; After</text>
+
+  <!-- BEFORE Section -->
+  <g transform="translate(30, 70)" filter="url(#shadow)">
+    <rect width="555" height="580" rx="12" fill="#1e293b" stroke="#FF6B6B" stroke-width="1.5"/>
+    <rect width="555" height="40" rx="12" fill="#7f1d1d" opacity="0.6"/>
+    <rect y="28" width="555" height="12" fill="#7f1d1d" opacity="0.6"/>
+    <text x="277" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#fca5a5">BEFORE — Traditional SAP Analytics</text>
+
+    <!-- Pain points -->
+    <g transform="translate(20, 65)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ 6-12 Month Implementation</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">ETL pipeline design → build → test → deploy → maintain</text>
+    </g>
+    <g transform="translate(20, 135)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ $2M+ Annual TCO</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Infrastructure, engineering, monitoring, incident response</text>
+    </g>
+    <g transform="translate(20, 205)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ 24-48 Hour Data Staleness</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Nightly batch extraction means yesterday's numbers today</text>
+    </g>
+    <g transform="translate(20, 275)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ 2-4 Week Report Request Queue</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Every ad-hoc question requires IT involvement</text>
+    </g>
+    <g transform="translate(20, 345)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ Lost SAP Business Context</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Company codes, fiscal periods, cost hierarchies stripped in ETL</text>
+    </g>
+    <g transform="translate(20, 415)">
+      <rect width="515" height="60" rx="8" fill="#292524" stroke="#7f1d1d" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#fca5a5">❌ Single Region Only</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Each region requires separate 6-month project</text>
+    </g>
+
+    <!-- Summary -->
+    <text x="277" y="520" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#FF6B6B">60% of time = data gathering</text>
+    <text x="277" y="545" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#FF6B6B">40% of time = actual analysis</text>
+  </g>
+
+  <!-- AFTER Section -->
+  <g transform="translate(615, 70)" filter="url(#shadow)">
+    <rect width="555" height="580" rx="12" fill="#1e293b" stroke="#30D158" stroke-width="1.5"/>
+    <rect width="555" height="40" rx="12" fill="#14532d" opacity="0.6"/>
+    <rect y="28" width="555" height="12" fill="#14532d" opacity="0.6"/>
+    <text x="277" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#86efac">AFTER — SAP BDC Finance 360</text>
+
+    <!-- Benefits -->
+    <g transform="translate(20, 65)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ Deploy in &lt; 1 Day</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Zero ETL — SAP BDC products mount instantly via data sharing</text>
+    </g>
+    <g transform="translate(20, 135)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ Zero Pipeline Cost</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">No Airflow, no Spark, no dbt — Dynamic Tables auto-refresh</text>
+    </g>
+    <g transform="translate(20, 205)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ Near Real-Time Freshness</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Dynamic Tables refresh on downstream demand — no batch lag</text>
+    </g>
+    <g transform="translate(20, 275)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ 30-Second Answers via AI</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Cortex Agent answers natural language finance questions instantly</text>
+    </g>
+    <g transform="translate(20, 345)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ Full SAP Context Preserved</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Medallion architecture maintains company codes, fiscal calendars, hierarchies</text>
+    </g>
+    <g transform="translate(20, 415)">
+      <rect width="515" height="60" rx="8" fill="#052e16" stroke="#166534" stroke-width="1"/>
+      <text x="30" y="25" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" fill="#86efac">✓ Any Region, Same Day</text>
+      <text x="30" y="45" font-family="Inter, Arial, sans-serif" font-size="11" fill="#a8a29e">Self-contained Native App deploys to US, EMEA, APAC in hours</text>
+    </g>
+
+    <!-- Summary -->
+    <text x="277" y="520" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#30D158">5% of time = data access (automated)</text>
+    <text x="277" y="545" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600" fill="#30D158">95% of time = analysis &amp; decisions</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="680" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#64748b">Zero ETL · Governed Semantic Layer · AI-Powered · Multi-Region Native App</text>
+</svg>

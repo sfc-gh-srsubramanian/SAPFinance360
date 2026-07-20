@@ -17,7 +17,7 @@ artifacts:
     endpoint: finance360
   container_services:
     images:
-      - /sc360_app_provider/images/repo/finance_360:latest
+      - /sap_finance_360/public/finance_360_repo/finance_360:latest
 
 privileges:
   - CREATE COMPUTE POOL:

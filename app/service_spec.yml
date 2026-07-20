@@ -1,7 +1,7 @@
 spec:
   containers:
   - name: finance360
-    image: /sc360_app_provider/images/repo/finance_360:latest
+    image: /sap_finance_360/public/finance_360_repo/finance_360:latest
     env:
       PORT: "8080"
     resources:
