@@ -1,0 +1,5 @@
+SELECT
+    PROFITCENTER,
+    COMPANYCODE,
+    SEGMENT
+FROM {{ source('sap_bdc_l1', 'PROFITCENTER') }}

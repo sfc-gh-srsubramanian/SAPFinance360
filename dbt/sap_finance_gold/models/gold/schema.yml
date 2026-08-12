@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: pnl_summary
+    description: "P&L summary by company code, fiscal year, and period"
+    columns:
+      - name: COMPANYCODE
+        tests:
+          - not_null
+      - name: FISCALYEAR
+        tests:
+          - not_null
+      - name: FISCALPERIOD
+        tests:
+          - not_null
+      - name: REVENUE
+        tests:
+          - not_null
+      - name: NET_INCOME
+        tests:
+          - not_null
+
+  - name: gl_balance
+    description: "GL account balances aggregated by period"
+    columns:
+      - name: COMPANYCODE
+        tests:
+          - not_null
+      - name: GLACCOUNT
+        tests:
+          - not_null
+      - name: DEBITCREDITCODE
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['S', 'H']
+
+  - name: expense_by_costcenter
+    description: "Expenses broken down by cost center and GL account"
+    columns:
+      - name: COMPANYCODE
+        tests:
+          - not_null
+      - name: COSTCENTER
+        tests:
+          - not_null
+      - name: EXPENSE_AMOUNT
+        tests:
+          - not_null
+
+  - name: revenue_by_profitcenter
+    description: "Revenue by profit center and segment"
+    columns:
+      - name: COMPANYCODE
+        tests:
+          - not_null
+      - name: PROFITCENTER
+        tests:
+          - not_null
+      - name: REVENUE_AMOUNT
+        tests:
+          - not_null

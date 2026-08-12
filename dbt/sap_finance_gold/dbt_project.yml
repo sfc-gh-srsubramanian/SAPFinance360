@@ -1,0 +1,24 @@
+name: sap_finance_gold
+version: '1.0.0'
+config-version: 2
+
+profile: sap_finance_gold
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  sap_finance_gold:
+    staging:
+      +materialized: view
+      +schema: STAGING
+    gold:
+      +materialized: table
+      +schema: DBT_GOLD

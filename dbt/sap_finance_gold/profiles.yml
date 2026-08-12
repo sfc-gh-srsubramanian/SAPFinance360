@@ -1,0 +1,8 @@
+sap_finance_gold:
+  target: prod
+  outputs:
+    prod:
+      type: snowflake
+      database: SAP_FINANCE_360
+      schema: DBT_GOLD
+      role: ACCOUNTADMIN

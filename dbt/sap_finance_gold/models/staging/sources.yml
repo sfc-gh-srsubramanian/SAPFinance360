@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: sap_bdc_l1
+    database: SAP_FINANCE_360
+    schema: SAP_BDC_L1
+    description: "L1 silver layer - curated views over SAP BDC Standard Data Products"
+    tables:
+      - name: OPERATIONALACCTGDOCITEM
+        description: "GL line items (Universal Journal / ACDOCA)"
+      - name: JOURNALENTRY
+        description: "Accounting document headers"
+      - name: SUPPLIERINVOICE
+        description: "Supplier (AP) invoices"
+      - name: GENERALLEDGERACCOUNT
+        description: "GL account master data"
+      - name: COSTCENTER
+        description: "Cost center master data"
+      - name: PROFITCENTER
+        description: "Profit center master data"

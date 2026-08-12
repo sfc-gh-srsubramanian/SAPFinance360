@@ -1,0 +1,5 @@
+SELECT
+    COSTCENTER,
+    COMPANYCODE,
+    DEPARTMENT
+FROM {{ source('sap_bdc_l1', 'COSTCENTER') }}
